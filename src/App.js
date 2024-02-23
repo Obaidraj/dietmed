@@ -13,7 +13,7 @@ useEffect(() => {
   }
 
 
-}, [])
+}, [navigate])
   return (
     <div className="h-screen w-screen box-border">
     
