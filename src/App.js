@@ -13,7 +13,7 @@ useEffect(() => {
   }
 
 
-}, [navigate])
+}, [])
 //check the app deployments
   return (
     <div className="h-screen w-screen box-border">
