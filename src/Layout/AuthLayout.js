@@ -1,8 +1,14 @@
 import React from "react";
 import Logo from "../assets/logo.png";
 import Button from "../components/common/Button";
+import BackIcon from "../assets/backIcon.svg"
+import { useWindowSize } from 'react-use';
+
 import { useNavigate, useLocation } from "react-router-dom";
+import { ReactSVG } from "react-svg";
+
 const AuthLayout = ({ children }) => {
+  const {width} =useWindowSize()
   let navigate = useNavigate();
   const location = useLocation();
 const handleClick=()=>{
@@ -13,17 +19,32 @@ const handleClick=()=>{
 
   }
 }
+const handleBack=()=>{
+  navigate("/auth/login") 
+}
+
   return (
     <div className=" h-full w-full flex">
-     {location.pathname !== "/auth/login"&& <Button variant="outlined" className="h-[5%] w-[5%] m-4">
-        Go Back
+     {location.pathname !== "/auth/login"&& <Button variant="outlined" className="h-[5%] w-[5%] m-4" onClick={handleBack}>
+   { width<1024?  <ReactSVG src={BackIcon} />: <span >  Go Back</span>}
       </Button>}
-      <div className=" flex  h-full w-[50%]">
+       
+      <div className=" flex  h-full sm:w-[50%] w-full">
         <div className=" flex flex-col   justify-center items-center w-full h-full">
+        <img
+            src={Logo}
+            alt="logo"
+            className="w-[20%] h-[20%] rounded-full shadow-2xl object-cover flex sm:hidden"
+          />
           {children}
+        <Button variant="outlined" onClick={handleClick} className=" my-5 flex sm:hidden">
+            {location.pathname !== "/auth/signup"
+              ? "Create An Account"
+              : "Already have an account"}
+          </Button>
         </div>
       </div>
-      <div className="bg-purple-800 w-[50%] rounded-bl-[45px]">
+      <div className="bg-purple-800 w-[50%] rounded-bl-[45px] hidden sm:flex">
         <div className="flex h-full w-full justify-center gap-5 items-center flex-col px-3">
           <img
             src={Logo}
