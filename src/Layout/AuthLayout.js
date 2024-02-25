@@ -25,9 +25,7 @@ const handleBack=()=>{
 
   return (
     <div className=" h-full w-full flex">
-     {location.pathname !== "/auth/login"&& <Button variant="outlined" className="h-[5%] w-[5%] m-4" onClick={handleBack}>
-   { width<1024?  <ReactSVG src={BackIcon} />: <span >  Go Back</span>}
-      </Button>}
+
        
       <div className=" flex  h-full sm:w-[50%] w-full">
         <div className=" flex flex-col   justify-center items-center w-full h-full">
@@ -53,7 +51,7 @@ const handleBack=()=>{
           />
           <div className="text-white text-xl w-[75%]">
             <div className="text-center text-4xl uppercase font-semibold py-2  ">
-              Diet med track
+            Health Harbor
             </div>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             Pellentesque nec erat enim. Nullam sapien nisi, vestibulum id ex sit

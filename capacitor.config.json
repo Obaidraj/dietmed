@@ -1,0 +1,8 @@
+{
+  "appId": "com.healthharbor.com",
+  "appName": "Health Harbor",
+  "webDir": "build",
+  "server": {
+    "androidScheme": "https"
+  }
+}

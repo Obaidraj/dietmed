@@ -23,7 +23,7 @@ const Forget = () => {
   }
   return (
     <AuthLayout>
-    <form  className="flex flex-col gap-2 w-[60%]" onSubmit={handleSubmit(Submit)}>
+    <form  className="flex flex-col gap-2 md:w-[80%] lg:w-[60%] sm:w-[90%] xs:w-[90%]" onSubmit={handleSubmit(Submit)}>
 
     <div className="font-bold text-4xl text-center py-5">Sign In</div>
     <Controller
