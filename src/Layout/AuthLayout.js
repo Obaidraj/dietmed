@@ -32,7 +32,7 @@ const handleBack=()=>{
         <img
             src={Logo}
             alt="logo"
-            className="w-[20%] h-[20%] rounded-full shadow-2xl object-cover flex sm:hidden"
+            className="w-[50%] h-[20%] rounded-full shadow-2xl object-cover flex sm:hidden"
           />
           {children}
         <Button variant="outlined" onClick={handleClick} className=" my-5 flex sm:hidden">

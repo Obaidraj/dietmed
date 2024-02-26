@@ -1,4 +1,6 @@
 import React from "react";
+import { useNavigate, useLocation } from "react-router-dom";
+
 import InputField from "../../components/common/InputField";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { Controller, useForm } from "react-hook-form";
@@ -10,6 +12,8 @@ import MsgIcon from "../../assets/mail.svg"
 import LockIcon from "../../assets/lock.svg"
   import { ReactSVG } from "react-svg";
 const Login = () => {
+  let navigate = useNavigate();
+
   const {
     control,
     register,
@@ -21,6 +25,7 @@ const Login = () => {
   });
   const Submit=(x)=>{
     console.log(x)
+    navigate("/") 
   }
   return (
     <AuthLayout>
